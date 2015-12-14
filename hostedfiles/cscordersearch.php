@@ -49,6 +49,8 @@ $searchquery = $searchquery . " and ATGCORE.DCSPP_ORDER.STATE = '".$order_status
 }
 echo "<br><br>".$searchquery."<BR><BR>";
 
+
+// You will have to modify the Query to meet your needs.  This has some extended tables (RC_*) that your DB will not have.
 $query="
 SELECT '<a href=\"#Foo\" onclick=\"atg.commerce.csr.order.loadExistingOrder('''||ATGCORE.DCSPP_ORDER.ORDER_ID||''',''NO_PENDING_ACTION''); return false;\">'||ATGCORE.DCSPP_ORDER.ORDER_ID||'</a>' orderid,
        ATGCORE.DCSPP_ORDER.STATE order_state,
