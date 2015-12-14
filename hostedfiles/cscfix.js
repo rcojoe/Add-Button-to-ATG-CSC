@@ -1,6 +1,6 @@
 
 function refreshSearch(){
-console.log("Ajex call about to go");
+console.log("Ajax call about to go");
 dojo.xhrGet({
 // The URL to request
 url: "https://csc.example.com/csc/openorders.php",
