@@ -1,0 +1,14 @@
+{
+"name":"Add button to CSC",
+"description":"Creates a Button to apply the search",
+"version":"1.1",
+"manifest_version":2,
+"content_scripts": [
+    {
+      "matches": ["http://csc.example.com/*","https://csc.example.com/*"],
+      "js": ["myscript.js"],
+      "run_at": "document_end",
+			"all_frames" : false
+    }
+  ]
+}
