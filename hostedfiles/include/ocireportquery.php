@@ -16,7 +16,7 @@ echo "Can not connect to Oracle Server";
 exit;
 }
 $filename = basename($_SERVER['SCRIPT_NAME'],".php").".csv";
-
+//$rename $query2 to $query to test this file.  It's just going to give you a pretty html table if called from browser.
 $query2="SELECT * FROM ATGCORE.DCSPP_ORDER";
 //echo $query;
 $stid = oci_parse($objConnect, $query);
