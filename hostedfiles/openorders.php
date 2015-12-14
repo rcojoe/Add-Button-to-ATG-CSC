@@ -11,7 +11,7 @@ var_dump($_POST["/atg/commerce/custsvc/order/OrderSearchTreeQueryFormHandler_sea
 if (isset($_POST["/atg/commerce/custsvc/order/OrderSearchTreeQueryFormHandler_searchRequest_fields"])){
 $searchdata = $_POST["/atg/commerce/custsvc/order/OrderSearchTreeQueryFormHandler_searchRequest_fields"];
 }
- 
+ // You will have to modify the Query to meet your needs.  This has some extended tables (RC_*) that your DB will not have.
 $query="
 SELECT '<a href=\"#Foo\" onclick=\"atg.commerce.csr.order.loadExistingOrder('''||ATGCORE.DCSPP_ORDER.ORDER_ID||''',''NO_PENDING_ACTION''); return false;\">'||ATGCORE.DCSPP_ORDER.ORDER_ID||'</a>' orderid,
 to_char(ATGCORE.DCSPP_ORDER.SUBMITTED_DATE, 'MM-DD-YY_HH24:MI') submit_time,
